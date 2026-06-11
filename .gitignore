@@ -39,3 +39,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+/app/generated/prisma
+
+# SQLite database files — use a cloud DB (Turso) for production
+*.db
+*.db-shm
+*.db-wal
+
+.vercel
