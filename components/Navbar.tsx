@@ -1,9 +1,9 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState, useEffect, useMemo } from "react";
 import { motion, Variants } from "framer-motion";
-import { Flame } from "lucide-react";
 
 const NAV_LINKS = [
   { href: "/",             label: "Home"         },
@@ -75,14 +75,15 @@ export default function Navbar() {
       >
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 group">
-          <div
-            className="w-10 h-10 rounded-lg flex items-center justify-center border border-[rgba(255,107,0,0.35)] transition-transform duration-300 group-hover:scale-105"
-            style={{
-              background: "linear-gradient(135deg, rgba(255,107,0,0.12), rgba(200,60,0,0.08))",
-              boxShadow: "0 0 14px rgba(255,107,0,0.2)",
-            }}
-          >
-            <Flame className="w-5 h-5 text-[#FF6B00]" />
+          <div className="w-10 h-10 rounded-lg overflow-hidden transition-transform duration-300 group-hover:scale-105 flex-shrink-0">
+            <Image
+              src="/amalgam_iit_madras_logo.jpg"
+              alt="AMALGAM IIT Madras"
+              width={40}
+              height={40}
+              className="w-full h-full object-contain"
+              priority
+            />
           </div>
           <div className="flex flex-col leading-none gap-[3px]">
             <span className="text-xl md:text-2xl font-black tracking-[0.18em] text-white font-display">
