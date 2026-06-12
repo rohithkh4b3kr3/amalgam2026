@@ -728,12 +728,12 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 py-4 flex items-center gap-6 md:gap-10 overflow-x-auto">
             {STATS.map((s, i) => (
               <div key={s.label} className="flex items-center gap-4 shrink-0">
-                {i > 0 && <div className="w-px h-7 bg-[rgba(180,100,0,0.12)]" />}
+                {i > 0 && <div className="w-px h-7 bg-[rgba(255,107,0,0.2)]" />}
                 <div className="flex items-center gap-3">
                   <span className={`font-display font-black text-xl md:text-2xl tabular-nums leading-none ${s.color}`}>{s.value}</span>
                   <div className="flex flex-col gap-0.5">
-                    <span className="text-[9px] uppercase tracking-[0.22em] text-[rgba(180,100,0,0.38)] font-display leading-none">{s.label}</span>
-                    <span className="text-[10px] text-[rgba(140,110,70,0.4)] leading-none">{s.sub}</span>
+                    <span className="text-[9px] uppercase tracking-[0.22em] text-[rgba(150,60,0,0.45)] font-display leading-none">{s.label}</span>
+                    <span className="text-[10px] text-[rgba(120,55,10,0.45)] leading-none">{s.sub}</span>
                   </div>
                 </div>
               </div>
@@ -746,7 +746,7 @@ export default function HomePage() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 2.2 }}
-          className="absolute bottom-24 right-10 hidden lg:flex flex-col items-center gap-1.5 text-[rgba(180,100,0,0.35)] z-20"
+          className="absolute bottom-24 right-10 hidden lg:flex flex-col items-center gap-1.5 text-[rgba(180,60,0,0.4)] z-20"
         >
           <span className="text-[9px] tracking-[0.35em] uppercase font-display" style={{ writingMode: "vertical-rl" }}>Scroll Down</span>
           <motion.div animate={{ y: [0, 7, 0] }} transition={{ repeat: Infinity, duration: 1.5 }}>

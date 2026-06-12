@@ -26,7 +26,7 @@ function Digit({ value, label, prev }: { value: string; label: string; prev: str
           </motion.span>
         </AnimatePresence>
       </div>
-      <span className="text-[10px] md:text-xs text-[rgba(148,163,184,0.55)] tracking-[0.22em] uppercase font-medium font-display">
+      <span className="text-[10px] md:text-xs text-[rgba(120,60,10,0.55)] tracking-[0.22em] uppercase font-medium font-display">
         {label}
       </span>
     </div>

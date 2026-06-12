@@ -407,14 +407,6 @@ export default function HeroMetalBg() {
         <HexNut size={70} uid="nut-sm" />
       </motion.div>
 
-      {/* ── Subtle radial vignette so objects don't clash with text */}
-      <div
-        className="absolute inset-0"
-        style={{
-          background:
-            "radial-gradient(ellipse 75% 85% at 50% 50%, transparent 25%, rgba(5,5,3,0.6) 100%)",
-        }}
-      />
     </div>
   );
 }

@@ -182,10 +182,10 @@ export default function SectionForgeBg({ variant }: {
         style={{ background: "linear-gradient(to bottom, transparent, rgba(255,107,0,0.22) 25%, rgba(255,107,0,0.22) 75%, transparent)" }} />
 
       {/* ── Shared: top & bottom section fades ──────────── */}
-      <div className="absolute top-0 inset-x-0 h-20 pointer-events-none"
-        style={{ background: "linear-gradient(to bottom, rgba(2,1,0,0.45), transparent)" }} />
-      <div className="absolute bottom-0 inset-x-0 h-20 pointer-events-none"
-        style={{ background: "linear-gradient(to top, rgba(2,1,0,0.45), transparent)" }} />
+      <div className="absolute top-0 inset-x-0 h-16 pointer-events-none"
+        style={{ background: "linear-gradient(to bottom, rgba(255,107,0,0.04), transparent)" }} />
+      <div className="absolute bottom-0 inset-x-0 h-16 pointer-events-none"
+        style={{ background: "linear-gradient(to top, rgba(255,107,0,0.04), transparent)" }} />
 
       {/* ── Variant-specific elements ─────────────────── */}
 
