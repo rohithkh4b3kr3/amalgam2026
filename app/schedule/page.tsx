@@ -77,7 +77,7 @@ function EventRow({ event, index }: { event: typeof EVENTS[0]; index: number }) 
               {/* Time column */}
               <div className="shrink-0 sm:w-20 sm:text-right">
                 <div className="font-display text-sm font-black text-[#FFB800] leading-none">{event.time}</div>
-                <div className="font-display text-xs mt-0.5" style={{ color: "rgba(100,60,20,0.5)" }}>{event.endTime}</div>
+                <div className="font-display text-xs mt-0.5" style={{ color: "#7a3a0a" }}>{event.endTime}</div>
               </div>
 
               {/* Vertical rule */}
@@ -92,8 +92,8 @@ function EventRow({ event, index }: { event: typeof EVENTS[0]; index: number }) 
                     {CATEGORY_LABELS[event.category]}
                   </span>
                 </div>
-                <p className="text-xs leading-relaxed mb-2" style={{ color: "rgba(80,45,10,0.62)" }}>{event.description}</p>
-                <div className="flex flex-wrap gap-3 text-[10px]" style={{ color: "rgba(100,60,20,0.55)" }}>
+                <p className="text-xs leading-relaxed mb-2" style={{ color: "#5a2200" }}>{event.description}</p>
+                <div className="flex flex-wrap gap-3 text-[10px]" style={{ color: "#7a3a0a" }}>
                   <span className="flex items-center gap-1"><MapPin className="w-3 h-3 text-[#FF9A00]" />{event.venue}</span>
                 </div>
               </div>
@@ -129,7 +129,7 @@ export default function SchedulePage() {
             <h1 className="font-display font-black text-[clamp(2.4rem,7vw,5.5rem)] text-[#1A0A00] leading-[0.9] tracking-tight mb-4">
               SCHEDULE
             </h1>
-            <p className="text-sm max-w-lg leading-relaxed" style={{ color: "rgba(80,45,10,0.65)" }}>
+            <p className="text-sm max-w-lg leading-relaxed" style={{ color: "#5a2200" }}>
               Three days of workshops, keynotes, competitions, and cultural events. All times in IST.
             </p>
           </motion.div>
@@ -154,7 +154,7 @@ export default function SchedulePage() {
                 style={{
                   background: active ? "linear-gradient(135deg,#CC8800,#FFB800)" : "transparent",
                   clipPath: "polygon(8px 0,100% 0,100% calc(100% - 8px),calc(100% - 8px) 100%,0 100%,0 8px)",
-                  color: active ? undefined : "rgba(120,60,10,0.65)",
+                  color: active ? undefined : "#7a3a0a",
                 }}>
                 {DAY_LABELS[d]}
               </button>

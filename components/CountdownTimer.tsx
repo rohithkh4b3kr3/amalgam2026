@@ -20,13 +20,13 @@ function Digit({ value, label, prev }: { value: string; label: string; prev: str
             exit={{ y: 36, opacity: 0 }}
             transition={{ duration: 0.22, ease: "easeInOut" }}
             className="text-3xl md:text-5xl font-black tracking-wider block"
-            style={{ color: "#FFB800", fontFamily: "var(--font-orbitron)", display: "block" }}
+            style={{ color: "#D42000", fontFamily: "var(--font-orbitron)", display: "block" }}
           >
             {value}
           </motion.span>
         </AnimatePresence>
       </div>
-      <span className="text-[10px] md:text-xs text-[rgba(120,60,10,0.55)] tracking-[0.22em] uppercase font-medium font-display">
+      <span className="text-[10px] md:text-xs text-[#7a3a0a] tracking-[0.22em] uppercase font-medium font-display">
         {label}
       </span>
     </div>

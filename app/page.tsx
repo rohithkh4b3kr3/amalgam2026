@@ -19,17 +19,17 @@ import { FEST_SUBTITLE } from "@/lib/data";
 
 /* ─── Data ────────────────────────────────────────────────────── */
 const QUICK_LINKS = [
-  { href: "/schedule",     label: "Schedule",     icon: Calendar, desc: "Full 3-day event timeline",             color: "text-[#FFB800]" },
-  { href: "/speakers",     label: "Speakers",     icon: Mic,      desc: "Keynotes from IIT, ISRO & industry",    color: "text-[#FF9A00]" },
-  { href: "/workshops",    label: "Workshops",    icon: Wrench,   desc: "Hands-on SEM, DFT, 3D printing & more", color: "text-[#FF6B00]" },
-  { href: "/competitions", label: "Competitions", icon: Trophy,   desc: "₹1,08,000+ across 5 competitions",       color: "text-[#FFB800]" },
+  { href: "/schedule",     label: "Schedule",     icon: Calendar, desc: "Full 3-day event timeline",             color: "text-[#D42000]" },
+  { href: "/speakers",     label: "Speakers",     icon: Mic,      desc: "Keynotes from IIT, ISRO & industry",    color: "text-[#FF3D00]" },
+  { href: "/workshops",    label: "Workshops",    icon: Wrench,   desc: "Hands-on SEM, DFT, 3D printing & more", color: "text-[#CC2200]" },
+  { href: "/competitions", label: "Competitions", icon: Trophy,   desc: "₹1,08,000+ across 5 competitions",       color: "text-[#FF6B00]" },
 ];
 
 const STATS = [
   { label: "Prize Pool", value: "₹1.08L", numeric: 108, sub: "across 5 arenas",   color: "text-[#FF9A00]" },
   { label: "Workshops",  value: "5",       numeric: 5,   sub: "hands-on sessions", color: "text-[#FFB800]" },
   { label: "Keynotes",   value: "5",       numeric: 5,   sub: "industry leaders",  color: "text-[#FF6B00]" },
-  { label: "Days",       value: "3",       numeric: 3,   sub: "Aug 14–16, 2026",   color: "text-[#C8B898]" },
+  { label: "Days",       value: "3",       numeric: 3,   sub: "Aug 14–16, 2026",   color: "text-[#D42000]" },
 ];
 
 const TELEM_STATIC = [
@@ -86,8 +86,8 @@ function CountUpStat({
       <span className={`font-display font-black text-4xl md:text-5xl tabular-nums ${color}`}>
         {formatted}
       </span>
-      <span className="text-xs text-[rgba(80,45,10,0.6)] tracking-wide text-center">{sub}</span>
-      <span className="text-[10px] font-bold tracking-[0.18em] uppercase text-[rgba(100,55,15,0.65)] mt-0.5">{label}</span>
+      <span className="text-xs text-[#5a2200] tracking-wide text-center">{sub}</span>
+      <span className="text-[10px] font-bold tracking-[0.18em] uppercase text-[#7a3a0a] mt-0.5">{label}</span>
     </motion.div>
   );
 }
@@ -625,13 +625,13 @@ export default function HomePage() {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.7, delay: 0.85 }}
-                  className="font-light text-[rgba(80,40,10,0.55)] mt-2"
+                  className="font-light text-[#5a2200] mt-2"
                   style={{ fontSize: "clamp(1rem,3.5vw,2.6rem)", letterSpacing: "0.14em" }}
                 >
                   WHERE{" "}
                   <span
                     className="font-bold text-transparent bg-clip-text"
-                    style={{ backgroundImage: "linear-gradient(135deg,#D47800 0%,#E8A000 45%,#C46000 100%)" }}
+                    style={{ backgroundImage: "linear-gradient(135deg,#D42000 0%,#FF3D00 45%,#CC2200 100%)" }}
                   >
                     ELEMENTS
                   </span>
@@ -643,7 +643,7 @@ export default function HomePage() {
                 initial={{ opacity: 0, x: -16 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 1.1 }}
-                className="text-[rgba(80,40,10,0.65)] text-sm md:text-[0.95rem] max-w-md leading-relaxed border-l-2 border-[rgba(200,100,0,0.35)] pl-5 mb-8 mt-5"
+                className="text-[#5a2200] text-sm md:text-[0.95rem] max-w-md leading-relaxed border-l-2 border-[rgba(200,100,0,0.35)] pl-5 mb-8 mt-5"
               >
                 {FEST_SUBTITLE}
               </motion.p>
@@ -667,7 +667,7 @@ export default function HomePage() {
               </motion.div>
 
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.5 }}>
-                <p className="text-[10px] tracking-[0.38em] uppercase text-[rgba(200,100,0,0.45)] mb-3 font-bold font-display">
+                <p className="text-[10px] tracking-[0.38em] uppercase text-[rgba(200,100,0,0.8)] mb-3 font-bold font-display">
                   Event Countdown
                 </p>
                 <CountdownTimer />
@@ -689,29 +689,29 @@ export default function HomePage() {
             >
               <div className="flex items-center gap-2 pb-3 mb-1 border-b border-[rgba(200,100,0,0.12)]">
                 <div className="w-1.5 h-1.5 rounded-full bg-[#D47800] animate-pulse" />
-                <span className="font-display text-[9px] tracking-[0.25em] text-[rgba(180,120,50,0.6)] uppercase">Forge Monitor</span>
+                <span className="font-display text-[9px] tracking-[0.25em] text-[rgba(140,70,10,0.85)] uppercase">Forge Monitor</span>
               </div>
 
               <div className="flex flex-col gap-0.5 py-2 border-b border-[rgba(200,100,0,0.07)]">
-                <span className="font-display text-[8px] tracking-[0.18em] uppercase text-[rgba(120,60,10,0.55)]">Forge Temp</span>
+                <span className="font-display text-[8px] tracking-[0.18em] uppercase text-[#7a3a0a]">Forge Temp</span>
                 <div className="flex items-baseline gap-1">
                   <span ref={tempRef} className="font-display font-black text-[1.4rem] text-[#D47800] leading-none tabular-nums">1450</span>
-                  <span className="text-[9px] text-[rgba(180,100,0,0.45)]">°C</span>
+                  <span className="text-[9px] text-[rgba(180,100,0,0.75)]">°C</span>
                 </div>
               </div>
 
               <div className="flex flex-col gap-0.5 py-2 border-b border-[rgba(200,100,0,0.07)]">
-                <span className="font-display text-[8px] tracking-[0.18em] uppercase text-[rgba(120,60,10,0.55)]">Hardness</span>
+                <span className="font-display text-[8px] tracking-[0.18em] uppercase text-[#7a3a0a]">Hardness</span>
                 <div className="flex items-baseline gap-1">
                   <span ref={hardnessRef} className="font-display font-black text-[1.4rem] text-[#B08000] leading-none tabular-nums">58</span>
-                  <span className="text-[9px] text-[rgba(160,120,0,0.45)]">HRC</span>
+                  <span className="text-[9px] text-[rgba(160,100,0,0.75)]">HRC</span>
                 </div>
               </div>
 
               {TELEM_STATIC.map(({ id, label, value }) => (
                 <div key={id} className="flex flex-col gap-0.5 py-1.5">
-                  <span className="font-display text-[8px] tracking-[0.18em] uppercase text-[rgba(120,60,10,0.5)]">{label}</span>
-                  <span className="font-display text-[11px] font-bold text-[rgba(200,170,120,0.75)] leading-none">{value}</span>
+                  <span className="font-display text-[8px] tracking-[0.18em] uppercase text-[#7a3a0a]">{label}</span>
+                  <span className="font-display text-[11px] font-bold text-[#CC4400] leading-none">{value}</span>
                 </div>
               ))}
             </motion.div>
@@ -732,8 +732,8 @@ export default function HomePage() {
                 <div className="flex items-center gap-3">
                   <span className={`font-display font-black text-xl md:text-2xl tabular-nums leading-none ${s.color}`}>{s.value}</span>
                   <div className="flex flex-col gap-0.5">
-                    <span className="text-[9px] uppercase tracking-[0.22em] text-[rgba(150,60,0,0.45)] font-display leading-none">{s.label}</span>
-                    <span className="text-[10px] text-[rgba(120,55,10,0.45)] leading-none">{s.sub}</span>
+                    <span className="text-[9px] uppercase tracking-[0.22em] text-[rgba(150,60,0,0.7)] font-display leading-none">{s.label}</span>
+                    <span className="text-[10px] text-[rgba(120,55,10,0.7)] leading-none">{s.sub}</span>
                   </div>
                 </div>
               </div>
@@ -762,10 +762,6 @@ export default function HomePage() {
           ABOUT  (pinned feel via sticky + ambient orbs)
       ══════════════════════════════════════════════════════════ */}
       <section className="relative max-w-6xl mx-auto px-4 sm:px-6 py-28 grid md:grid-cols-2 gap-16 items-center overflow-hidden">
-        <SectionForgeBg variant="about" />
-        <div className="absolute inset-[-20%] pointer-events-none parallax-bg" data-parallax-y="160" data-parallax-x="40">
-          <div className="absolute inset-0 hex-grid opacity-35" />
-        </div>
 
         {/* ── Left column: annotation rail + text ─── */}
         <div className="gsap-reveal relative z-10 flex gap-5 sm:gap-7">
@@ -783,12 +779,12 @@ export default function HomePage() {
               <SweepHeading delay={0.12}><span className="text-forge">Advanced Materials</span></SweepHeading>
               <SweepHeading delay={0.24}><span className="text-[#1A0A00]">&amp; Innovation</span></SweepHeading>
             </div>
-            <p className="text-[rgba(80,40,10,0.65)] leading-relaxed mb-4">
+            <p className="text-[#5a2200] leading-relaxed mb-4">
               AMALGAM is the flagship annual fest of the Metallurgical &amp; Materials Engineering
               Department at IIT Madras. Students, researchers, and industry professionals converge for
               workshops, competitions, and inspiring keynotes.
             </p>
-            <p className="text-[rgba(80,40,10,0.5)] leading-relaxed">
+            <p className="text-[#5a2200] leading-relaxed">
               From X-ray diffraction labs to computational materials simulations — AMALGAM offers an
               unparalleled platform to push the boundaries of materials science.
             </p>
@@ -857,11 +853,11 @@ export default function HomePage() {
           className="text-center mb-12 relative z-10"
         >
           <h2 className="font-display font-black text-2xl md:text-3xl text-[#1A0A00] mb-2">Forge Sectors</h2>
-          <p className="text-[rgba(120,90,50,0.55)] text-sm">Access the various sectors of the fest</p>
+          <p className="text-[#7a4a1a] text-sm">Access the various sectors of the fest</p>
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 relative z-10">
-          {QUICK_LINKS.map(({ href, label, icon: Icon, desc, color }, i) => (
+          {QUICK_LINKS.map(({ href, label, icon: Icon, desc }, i) => (
             <motion.div
               key={href}
               initial={{ opacity: 0, y: 30 }}
@@ -870,20 +866,20 @@ export default function HomePage() {
               transition={{ delay: i * 0.1, duration: 0.6 }}
             >
               <Link href={href} className="block group h-full">
-                <TiltCard className="forge-card flex flex-col gap-5 p-6 h-full">
+                <TiltCard className="relative flex flex-col gap-5 p-6 h-full transition-all duration-300 bg-[#D42000] border border-[rgba(255,255,255,0.18)] group-hover:bg-white group-hover:border-[#D42000]">
                   <motion.div
-                    className="w-11 h-11 rounded-xl flex items-center justify-center"
-                    style={{ background: "rgba(180,100,0,0.06)", border: "1px solid rgba(180,100,0,0.18)" }}
+                    className="w-11 h-11 rounded-xl flex items-center justify-center transition-all duration-300"
+                    style={{ background: "rgba(255,255,255,0.18)", border: "1px solid rgba(255,255,255,0.35)" }}
                     whileHover={{ scale: 1.12, rotate: 4 }}
                     transition={{ type: "spring", stiffness: 300, damping: 15 }}
                   >
-                    <Icon className={`w-5 h-5 ${color}`} />
+                    <Icon className="w-5 h-5 text-white group-hover:text-[#D42000] transition-colors duration-300" />
                   </motion.div>
                   <div>
-                    <h3 className="font-display font-bold text-sm text-[#CC4400] mb-1.5 tracking-wide">{label}</h3>
-                    <p className="text-[rgba(80,40,10,0.6)] text-sm leading-relaxed">{desc}</p>
+                    <h3 className="font-display font-bold text-sm text-white group-hover:text-[#1A0A00] mb-1.5 tracking-wide transition-colors duration-300">{label}</h3>
+                    <p className="text-[rgba(255,255,255,0.82)] text-sm leading-relaxed group-hover:text-[#5a2200] transition-colors duration-300">{desc}</p>
                   </div>
-                  <div className={`flex items-center gap-1 text-xs font-bold tracking-wide ${color} mt-auto opacity-60 group-hover:opacity-100 transition-opacity`}>
+                  <div className="flex items-center gap-1 text-xs font-bold tracking-wide text-white group-hover:text-[#D42000] mt-auto transition-colors duration-300">
                     Enter Sector <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </TiltCard>
@@ -899,48 +895,22 @@ export default function HomePage() {
       {/* ══════════════════════════════════════════════════════════
           FOOTER BANNER — "Ready to Forge?" CTA
       ══════════════════════════════════════════════════════════ */}
-      <section className="relative overflow-hidden py-36 md:py-52 border-t border-[rgba(180,100,0,0.08)]">
-        <SectionForgeBg variant="footer" />
+      <section className="relative overflow-hidden py-36 md:py-52" style={{ background: "#D42000" }}>
 
         {/* Parallax formula grid — z-[10] above content so every cell is hoverable */}
         <div className="absolute inset-[-30%] parallax-bg z-[10]" data-parallax-y="220">
           <FormulaGridBg />
         </div>
 
-        {/* Layered central heat bloom */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute rounded-full"
-            style={{
-              width: "85vw", height: "65vh",
-              top: "50%", left: "50%", transform: "translate(-50%,-50%)",
-              background: "radial-gradient(ellipse, rgba(175,55,0,0.18) 0%, rgba(140,35,0,0.07) 40%, transparent 70%)",
-              filter: "blur(80px)",
-            }}
-          />
-          <div className="absolute rounded-full"
-            style={{
-              width: "52vw", height: "45vh",
-              top: "50%", left: "50%", transform: "translate(-50%,-50%)",
-              background: "radial-gradient(ellipse, rgba(255,100,0,0.1) 0%, transparent 65%)",
-              filter: "blur(55px)",
-            }}
-          />
-          <motion.div
-            className="absolute rounded-full"
-            animate={{ scale: [1, 1.22, 1], opacity: [0.45, 0.9, 0.45] }}
-            transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut" }}
-            style={{
-              width: "28vw", height: "22vh",
-              top: "50%", left: "50%", transform: "translate(-50%,-50%)",
-              background: "radial-gradient(ellipse, rgba(255,140,0,0.09) 0%, transparent 60%)",
-              filter: "blur(42px)",
-            }}
-          />
-        </div>
+        {/* Subtle dark vignette at edges */}
+        <div className="absolute inset-0 pointer-events-none"
+          style={{ background: "radial-gradient(ellipse at center, transparent 55%, rgba(0,0,0,0.25) 100%)" }} />
 
-        {/* Bottom fade */}
-        <div className="absolute bottom-0 left-0 right-0 h-64 pointer-events-none"
-          style={{ background: "linear-gradient(to top, rgba(255,255,255,0.94), transparent)" }} />
+        {/* Top/bottom edge fades into red */}
+        <div className="absolute top-0 left-0 right-0 h-16 pointer-events-none"
+          style={{ background: "linear-gradient(to bottom, rgba(180,0,0,0.5), transparent)" }} />
+        <div className="absolute bottom-0 left-0 right-0 h-16 pointer-events-none"
+          style={{ background: "linear-gradient(to top, rgba(180,0,0,0.5), transparent)" }} />
 
         {/* Ascending embers */}
         <EmberParticles />
@@ -950,7 +920,7 @@ export default function HomePage() {
           <div className="relative max-w-3xl w-full">
 
             {/* Corner bracket decoration */}
-            <CornerBrackets />
+            <CornerBrackets color="rgba(255,255,255,0.35)" />
 
             <div className="text-center py-12 px-6">
 
@@ -963,7 +933,8 @@ export default function HomePage() {
                   transition={{ delay: 0.1, duration: 0.5 }}
                   className="flex justify-center mb-10"
                 >
-                  <span className="section-label">
+                  <span className="inline-flex items-center gap-2 text-[10px] tracking-[0.3em] uppercase font-bold px-4 py-1.5"
+                    style={{ border: "1px solid rgba(255,255,255,0.4)", color: "rgba(255,255,255,0.9)", background: "rgba(255,255,255,0.12)" }}>
                     <Flame className="w-3.5 h-3.5" /> Final Protocol
                   </span>
                 </motion.div>
@@ -976,7 +947,7 @@ export default function HomePage() {
                       whileInView={{ y: 0, opacity: 1 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.88, ease: [0.22, 1, 0.36, 1] }}
-                      className="font-display font-black leading-none text-metallic"
+                      className="font-display font-black leading-none text-white"
                       style={{ fontSize: "clamp(2.8rem, 9vw, 6.5rem)" }}
                     >
                       READY TO
@@ -988,7 +959,7 @@ export default function HomePage() {
                       whileInView={{ y: 0, opacity: 1 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.88, delay: 0.09, ease: [0.22, 1, 0.36, 1] }}
-                      className="font-display font-black leading-none text-forge"
+                      className="font-display font-black leading-none text-white"
                       style={{ fontSize: "clamp(3.6rem, 12vw, 9rem)" }}
                     >
                       FORGE?
@@ -1006,19 +977,19 @@ export default function HomePage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.32, duration: 0.7 }}
-                  className="text-[rgba(80,40,10,0.6)] text-base md:text-lg mb-7 max-w-md mx-auto leading-relaxed"
+                  className="text-[rgba(255,255,255,0.88)] text-base md:text-lg mb-7 max-w-md mx-auto leading-relaxed"
                 >
                   Secure your place at the most advanced materials science symposium at IIT Madras.
                 </motion.p>
 
-                {/* Electric divider */}
+                {/* White divider */}
                 <motion.div
                   initial={{ scaleX: 0 }}
                   whileInView={{ scaleX: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.44, duration: 0.55 }}
-                  className="divider-electric w-40 mx-auto mb-9"
-                  style={{ transformOrigin: "left center" }}
+                  className="w-40 mx-auto mb-9 h-[2px]"
+                  style={{ background: "rgba(255,255,255,0.4)", transformOrigin: "left center" }}
                 />
 
                 {/* Mini stats row */}
@@ -1030,17 +1001,17 @@ export default function HomePage() {
                   className="flex items-center justify-center gap-4 md:gap-7 mb-11 flex-wrap"
                 >
                   {[
-                    { value: "Aug 14–16", label: "2026",       color: "text-[#FF9A00]" },
-                    { value: "₹1.08L",    label: "Prize Pool", color: "text-[#FFB800]" },
-                    { value: "5",         label: "Workshops",  color: "text-[#FF6B00]" },
-                    { value: "IIT Madras",label: "MME Dept",   color: "text-[#C8B898]" },
-                  ].map(({ value, label, color }, i, arr) => (
+                    { value: "Aug 14–16", label: "2026"       },
+                    { value: "₹1.08L",    label: "Prize Pool" },
+                    { value: "5",         label: "Workshops"  },
+                    { value: "IIT Madras",label: "MME Dept"   },
+                  ].map(({ value, label }, i, arr) => (
                     <div key={label} className="flex items-center gap-4 md:gap-7">
                       <div className="flex flex-col items-center gap-0.5">
-                        <span className={`font-display font-black text-sm leading-none ${color}`}>{value}</span>
-                        <span className="text-[9px] uppercase tracking-[0.2em] text-[rgba(100,55,15,0.5)] mt-0.5">{label}</span>
+                        <span className="font-display font-black text-sm leading-none text-white">{value}</span>
+                        <span className="text-[9px] uppercase tracking-[0.2em] text-[rgba(255,255,255,0.6)] mt-0.5">{label}</span>
                       </div>
-                      {i < arr.length - 1 && <div className="w-px h-6 bg-[rgba(180,100,0,0.16)]" />}
+                      {i < arr.length - 1 && <div className="w-px h-6 bg-[rgba(255,255,255,0.25)]" />}
                     </div>
                   ))}
                 </motion.div>
@@ -1056,11 +1027,12 @@ export default function HomePage() {
                 className="relative z-[20] pointer-events-auto flex gap-4 md:gap-5 flex-wrap justify-center"
               >
                 <Link href="/register"
-                  className="btn-glow btn-electric inline-flex items-center gap-2.5 px-10 md:px-14 py-4 font-black text-sm tracking-[0.2em]">
+                  className="inline-flex items-center gap-2.5 px-10 md:px-14 py-4 font-black text-sm tracking-[0.2em] bg-white text-[#D42000] hover:bg-[#1A0A00] hover:text-white transition-colors duration-300">
                   <Zap className="w-4 h-4" /> REGISTER NOW
                 </Link>
                 <Link href="/competitions"
-                  className="btn-glow btn-outline-steel inline-flex items-center gap-2.5 px-8 md:px-11 py-4 font-bold text-sm tracking-[0.15em]">
+                  className="inline-flex items-center gap-2.5 px-8 md:px-11 py-4 font-bold text-sm tracking-[0.15em] text-white hover:bg-white hover:text-[#D42000] transition-colors duration-300"
+                  style={{ border: "2px solid rgba(255,255,255,0.7)" }}>
                   <Trophy className="w-4 h-4" /> VIEW COMPETITIONS
                 </Link>
               </motion.div>
@@ -1072,7 +1044,7 @@ export default function HomePage() {
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.92 }}
-                  className="mt-10 text-[rgba(100,55,15,0.4)] text-[9px] tracking-[0.32em] uppercase font-display"
+                  className="mt-10 text-[rgba(255,255,255,0.45)] text-[9px] tracking-[0.32em] uppercase font-display"
                 >
                   IIT Madras &middot; Dept. of MME &middot; Aug 14&ndash;16, 2026
                 </motion.p>

@@ -9,29 +9,29 @@ export default function CrystalLattice({ className = "" }: { className?: string 
         animate={{ rotateX: [0, 360], rotateY: [0, 360] }}
         transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
       >
-        {/* Core node — warm amber */}
+        {/* Core node */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full"
-          style={{ background: "rgba(255,154,0,0.85)", transform: "translateZ(0px)", boxShadow: "0 0 18px rgba(255,154,0,0.5)" }} />
+          style={{ background: "#D42000", transform: "translateZ(0px)" }} />
 
-        {/* Front face nodes — orange */}
+        {/* Front face nodes */}
         {[["top-0 left-0"], ["top-0 right-0"], ["bottom-0 left-0"], ["bottom-0 right-0"]].map((cls, i) => (
-          <div key={`f${i}`} className={`absolute ${cls[0]} w-4 h-4 rounded-full`}
-            style={{ background: "rgba(255,107,0,0.8)", transform: "translateZ(100px)" }} />
+          <div key={`f${i}`} className={`absolute ${cls[0]} w-3.5 h-3.5 rounded-full`}
+            style={{ background: "#CC2200", transform: "translateZ(100px)" }} />
         ))}
 
-        {/* Back face nodes — amber */}
+        {/* Back face nodes */}
         {[["top-0 left-0"], ["top-0 right-0"], ["bottom-0 left-0"], ["bottom-0 right-0"]].map((cls, i) => (
-          <div key={`b${i}`} className={`absolute ${cls[0]} w-4 h-4 rounded-full`}
-            style={{ background: "rgba(255,184,0,0.75)", transform: "translateZ(-100px)" }} />
+          <div key={`b${i}`} className={`absolute ${cls[0]} w-3.5 h-3.5 rounded-full`}
+            style={{ background: "#991500", transform: "translateZ(-100px)" }} />
         ))}
 
         {/* Lattice ring planes */}
         <div className="absolute inset-0 rounded-full"
-          style={{ border: "1px solid rgba(255,107,0,0.25)", transform: "rotateX(60deg) translateZ(0px)" }} />
+          style={{ border: "1.5px solid rgba(180,20,0,0.55)", transform: "rotateX(60deg) translateZ(0px)" }} />
         <div className="absolute inset-0 rounded-full"
-          style={{ border: "1px solid rgba(255,154,0,0.2)", transform: "rotateY(60deg) translateZ(0px)" }} />
+          style={{ border: "1.5px solid rgba(160,15,0,0.45)", transform: "rotateY(60deg) translateZ(0px)" }} />
         <div className="absolute inset-0 rounded-full"
-          style={{ border: "1px solid rgba(200,130,40,0.18)", transform: "rotateZ(45deg) translateZ(0px)" }} />
+          style={{ border: "1px solid rgba(140,10,0,0.35)", transform: "rotateZ(45deg) translateZ(0px)" }} />
       </motion.div>
     </div>
   );

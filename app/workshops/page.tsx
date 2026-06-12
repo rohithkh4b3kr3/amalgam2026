@@ -25,8 +25,8 @@ function CapacityBar({ capacity, registered }: { capacity: number; registered: n
   return (
     <div>
       <div className="flex items-center justify-between mb-1.5">
-        <span className="text-[10px] tracking-[0.18em] uppercase font-bold" style={{ color: "rgba(100,60,20,0.55)" }}>Capacity</span>
-        <span className="text-xs font-display" style={{ color: "rgba(100,55,15,0.65)" }}>{registered}/{capacity}</span>
+        <span className="text-[10px] tracking-[0.18em] uppercase font-bold" style={{ color: "#7a3a0a" }}>Capacity</span>
+        <span className="text-xs font-display" style={{ color: "#7a3a0a" }}>{registered}/{capacity}</span>
       </div>
       <div className="h-1.5 rounded-none overflow-hidden" style={{ background: "rgba(255,107,0,0.08)", border: "1px solid rgba(255,107,0,0.12)" }}>
         <motion.div initial={{ width: 0 }} whileInView={{ width: `${pct}%` }} viewport={{ once: true }}
@@ -106,7 +106,7 @@ function WorkshopCard({ ws, index }: { ws: typeof WORKSHOPS[0]; index: number })
           {/* Divider */}
           <div className="h-px mb-4" style={{ background: "linear-gradient(90deg, rgba(255,107,0,0.25), transparent)" }} />
 
-          <p className="text-sm leading-relaxed mb-5" style={{ color: "rgba(80,45,10,0.65)" }}>{ws.description}</p>
+          <p className="text-sm leading-relaxed mb-5" style={{ color: "#5a2200" }}>{ws.description}</p>
 
           <CapacityBar capacity={ws.capacity} registered={ws.registered} />
 
@@ -117,7 +117,7 @@ function WorkshopCard({ ws, index }: { ws: typeof WORKSHOPS[0]; index: number })
               { icon: MapPin, value: ws.venue,                      color: "text-[#FF9A00]" },
               { icon: Wrench, value: ws.instructors,                color: "text-[#FF6B00]" },
             ].map(({ icon: Icon, value, color }) => (
-              <div key={value} className="flex items-start gap-2 text-xs" style={{ color: "rgba(100,55,15,0.6)" }}>
+              <div key={value} className="flex items-start gap-2 text-xs" style={{ color: "#7a3a0a" }}>
                 <Icon className={`w-3.5 h-3.5 ${color} shrink-0 mt-0.5`} />
                 <span className="leading-tight">{value}</span>
               </div>
@@ -126,7 +126,7 @@ function WorkshopCard({ ws, index }: { ws: typeof WORKSHOPS[0]; index: number })
 
           {/* Prerequisites */}
           <div className="px-4 py-3 text-xs"
-            style={{ background: "rgba(255,107,0,0.05)", border: "1px solid rgba(255,107,0,0.12)", color: "rgba(100,55,15,0.65)" }}>
+            style={{ background: "rgba(255,107,0,0.05)", border: "1px solid rgba(255,107,0,0.12)", color: "#7a3a0a" }}>
             <span className="font-bold uppercase tracking-wider text-[9px]" style={{ color: "rgba(140,70,10,0.75)" }}>Prerequisites: </span>
             {ws.prerequisites}
           </div>
@@ -164,7 +164,7 @@ export default function WorkshopsPage() {
             <h1 className="font-display font-black text-[clamp(2.4rem,7vw,5.5rem)] text-[#1A0A00] leading-[0.9] tracking-tight mb-4">
               WORKSHOPS
             </h1>
-            <p className="text-sm max-w-lg leading-relaxed" style={{ color: "rgba(80,45,10,0.65)" }}>
+            <p className="text-sm max-w-lg leading-relaxed" style={{ color: "#5a2200" }}>
               Five intensive hands-on workshops: XRD, SEM/TEM, DFT simulation, 3D metal printing, and electrochemical analysis.
             </p>
           </motion.div>
@@ -204,7 +204,7 @@ export default function WorkshopsPage() {
                 style={{
                   background: active ? "linear-gradient(135deg,#CC8800,#FFB800)" : "transparent",
                   clipPath: "polygon(6px 0,100% 0,100% calc(100% - 6px),calc(100% - 6px) 100%,0 100%,0 6px)",
-                  color: active ? undefined : "rgba(120,60,10,0.65)",
+                  color: active ? undefined : "#7a3a0a",
                 }}>
                 {label}
               </button>

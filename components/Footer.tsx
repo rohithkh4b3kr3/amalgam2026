@@ -35,21 +35,21 @@ export default function Footer() {
             </div>
             <div className="flex flex-col leading-none gap-[3px]">
               <span className="font-display font-black text-lg tracking-[0.18em] text-[#1A0A00]">AMALGAM</span>
-              <span className="text-[8px] tracking-[0.32em] uppercase text-[rgba(80,40,0,0.45)]">IIT Madras · MME</span>
+              <span className="text-[8px] tracking-[0.32em] uppercase text-[rgba(80,40,0,0.9)]">IIT Madras · MME</span>
             </div>
           </div>
 
-          <p className="text-[rgba(80,45,10,0.65)] text-sm leading-relaxed max-w-xs">
+          <p className="text-[#5a2200] text-sm leading-relaxed max-w-xs">
             The annual techno-cultural fest of the Department of Metallurgical &amp; Materials
             Engineering, IIT Madras.
           </p>
 
           <div className="flex flex-col gap-2">
-            <div className="flex items-center gap-2 text-sm text-[rgba(80,45,10,0.55)]">
+            <div className="flex items-center gap-2 text-sm text-[#5a2200]">
               <MapPin className="w-3.5 h-3.5 text-[#FF9A00] shrink-0" />
               IIT Madras, Chennai — 600036
             </div>
-            <div className="flex items-center gap-2 text-sm text-[rgba(80,45,10,0.55)]">
+            <div className="flex items-center gap-2 text-sm text-[#5a2200]">
               <Mail className="w-3.5 h-3.5 text-[#FF9A00] shrink-0" />
               amalgam@mme.iitm.ac.in
             </div>
@@ -66,7 +66,7 @@ export default function Footer() {
               <li key={href}>
                 <Link
                   href={href}
-                  className="text-sm text-[rgba(80,45,10,0.65)] hover:text-[#FF9A00] transition-colors duration-200"
+                  className="text-sm text-[#5a2200] hover:text-[#FF9A00] transition-colors duration-200"
                 >
                   {label}
                 </Link>
@@ -85,7 +85,7 @@ export default function Footer() {
               <li key={href}>
                 <Link
                   href={href}
-                  className="text-sm text-[rgba(80,45,10,0.65)] hover:text-[#FF9A00] transition-colors duration-200"
+                  className="text-sm text-[#5a2200] hover:text-[#FF9A00] transition-colors duration-200"
                 >
                   {label}
                 </Link>
@@ -96,7 +96,7 @@ export default function Footer() {
                 href="https://mme.iitm.ac.in"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 text-sm text-[rgba(80,45,10,0.65)] hover:text-[#FF9A00] transition-colors duration-200"
+                className="inline-flex items-center gap-1 text-sm text-[#5a2200] hover:text-[#FF9A00] transition-colors duration-200"
               >
                 Dept. Website <ExternalLink className="w-3 h-3" />
               </a>
@@ -108,10 +108,10 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="divider-electric mx-6" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-2">
-        <p className="text-xs text-[rgba(80,45,10,0.4)]">
+        <p className="text-xs text-[rgba(80,45,10,0.65)]">
           © 2026 AMALGAM — IIT Madras MME Dept. All rights reserved.
         </p>
-        <p className="text-xs text-[rgba(80,45,10,0.4)]">Built by the AMALGAM Web Team</p>
+        <p className="text-xs text-[rgba(80,45,10,0.65)]">Built by the AMALGAM Web Team</p>
       </div>
     </footer>
   );

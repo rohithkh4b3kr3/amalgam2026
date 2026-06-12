@@ -138,7 +138,7 @@ body {
 .text-forge {
   background: linear-gradient(
     135deg,
-    #FF6B00 0%, #FF9A00 30%, #CC4400 55%, #FF6B00 80%, #FF9A00 100%
+    #D42000 0%, #FF6B00 35%, #FF3D00 60%, #D42000 80%, #FF6B00 100%
   );
   background-size: 200% auto;
   -webkit-background-clip: text;
@@ -150,7 +150,7 @@ body {
 .text-molten {
   background: linear-gradient(
     135deg,
-    #CC4400 0%, #FF6B00 45%, #CC4400 90%, #FF3D00 100%
+    #AA1800 0%, #D42000 40%, #FF3D00 70%, #CC2200 100%
   );
   background-size: 200% auto;
   -webkit-background-clip: text;
@@ -162,7 +162,7 @@ body {
 .text-metallic {
   background: linear-gradient(
     135deg,
-    #8A4820 0%, #CC6A30 22%, #FF8844 50%, #CC6A30 75%, #8A4820 100%
+    #CC2200 0%, #FF4500 28%, #FF6B00 50%, #FF4500 75%, #CC2200 100%
   );
   background-size: 200% auto;
   -webkit-background-clip: text;
@@ -174,7 +174,7 @@ body {
 .text-cyber {
   background: linear-gradient(
     135deg,
-    #FF6B00 0%, #FF3D00 50%, #FF6B00 100%
+    #CC2200 0%, #FF3D00 50%, #CC2200 100%
   );
   background-size: 200% auto;
   -webkit-background-clip: text;
@@ -320,9 +320,9 @@ body {
   text-transform: uppercase;
   padding: 6px 14px;
   border-radius: 3px;
-  border: 1px solid rgba(255,107,0,0.38);
-  background: rgba(255,107,0,0.08);
-  color: #CC4400;
+  border: 1px solid rgba(212,32,0,0.4);
+  background: rgba(212,32,0,0.07);
+  color: #D42000;
   clip-path: polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px);
 }
 
@@ -333,12 +333,12 @@ body {
   height: 1px;
   background: linear-gradient(
     90deg, transparent,
-    rgba(255,107,0,0.5) 30%,
-    rgba(255,80,0,0.75) 50%,
-    rgba(255,107,0,0.5) 70%,
+    rgba(212,32,0,0.5) 25%,
+    rgba(255,61,0,0.85) 50%,
+    rgba(212,32,0,0.5) 75%,
     transparent
   );
-  box-shadow: 0 0 6px rgba(255,107,0,0.3);
+  box-shadow: 0 0 6px rgba(212,32,0,0.3);
 }
 
 /* ══════════════════════════════════════════════════════════════

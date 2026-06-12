@@ -19,11 +19,11 @@ function useParallax(speed = 0.45) {
 
 function PrizeRow({ rank, amount }: { rank: string; amount: string }) {
   const styles: Record<string, { text: string; border: string; bg: string; icon: string }> = {
-    "1st": { text: "#FFE060", border: "rgba(255,224,96,0.25)",  bg: "rgba(255,224,96,0.05)",  icon: "🥇" },
-    "2nd": { text: "#D4A860", border: "rgba(212,168,96,0.2)",   bg: "rgba(212,168,96,0.04)",  icon: "🥈" },
-    "3rd": { text: "#B07840", border: "rgba(176,120,64,0.18)",  bg: "rgba(176,120,64,0.035)", icon: "🥉" },
+    "1st": { text: "#D42000", border: "rgba(212,32,0,0.25)",   bg: "rgba(212,32,0,0.05)",   icon: "🥇" },
+    "2nd": { text: "#CC4400", border: "rgba(204,68,0,0.22)",   bg: "rgba(204,68,0,0.04)",   icon: "🥈" },
+    "3rd": { text: "#AA3300", border: "rgba(170,51,0,0.18)",   bg: "rgba(170,51,0,0.035)",  icon: "🥉" },
   };
-  const s = styles[rank] ?? { text: "#A87838", border: "rgba(255,184,0,0.15)", bg: "rgba(255,184,0,0.03)", icon: "" };
+  const s = styles[rank] ?? { text: "#CC4400", border: "rgba(204,68,0,0.18)", bg: "rgba(204,68,0,0.03)", icon: "" };
   return (
     <div className="flex items-center justify-between px-4 py-2.5 text-sm"
       style={{
@@ -91,11 +91,11 @@ function CompCard({ comp, index, isSelected, onClick }: {
 
         {/* Meta: team + deadline */}
         <div className="flex flex-col gap-1.5 mb-4">
-          <div className="flex items-center gap-1.5 text-[11px]" style={{ color: "rgba(100,55,15,0.6)" }}>
+          <div className="flex items-center gap-1.5 text-[11px]" style={{ color: "#7a3a0a" }}>
             <Users className="w-3 h-3 shrink-0" />
             <span>{comp.teamSize}</span>
           </div>
-          <div className="flex items-center gap-1.5 text-[11px]" style={{ color: "rgba(100,55,15,0.6)" }}>
+          <div className="flex items-center gap-1.5 text-[11px]" style={{ color: "#7a3a0a" }}>
             <Calendar className="w-3 h-3 shrink-0" />
             <span>Due {comp.registrationDeadline}</span>
           </div>
@@ -165,28 +165,28 @@ function DetailPanel({ comp, onClose }: {
 
           {/* Left — description + eligibility + rounds */}
           <div className="lg:col-span-3 flex flex-col gap-6">
-            <p className="text-sm leading-relaxed" style={{ color: "rgba(80,40,10,0.7)" }}>{comp.description}</p>
+            <p className="text-sm leading-relaxed" style={{ color: "#5a2200" }}>{comp.description}</p>
 
             <div>
               <div className="flex items-center gap-2 mb-2">
                 <Shield className="w-3.5 h-3.5 text-[#FF9A00]" />
-                <h4 className="text-[9px] font-bold tracking-[0.22em] uppercase" style={{ color: "rgba(140,70,10,0.65)" }}>
+                <h4 className="text-[9px] font-bold tracking-[0.22em] uppercase" style={{ color: "#7a3a0a" }}>
                   Eligibility
                 </h4>
               </div>
-              <p className="text-sm pl-5" style={{ color: "rgba(90,50,12,0.65)" }}>{comp.eligibility}</p>
+              <p className="text-sm pl-5" style={{ color: "#5a2200" }}>{comp.eligibility}</p>
             </div>
 
             <div>
               <div className="flex items-center gap-2 mb-3">
                 <Zap className="w-3.5 h-3.5 text-[#FF6B00]" />
-                <h4 className="text-[9px] font-bold tracking-[0.22em] uppercase" style={{ color: "rgba(140,70,10,0.65)" }}>
+                <h4 className="text-[9px] font-bold tracking-[0.22em] uppercase" style={{ color: "#7a3a0a" }}>
                   Competition Rounds
                 </h4>
               </div>
               <ol className="flex flex-col gap-2 pl-2">
                 {comp.rounds.map((round, ri) => (
-                  <li key={ri} className="flex items-start gap-3 text-sm" style={{ color: "rgba(90,50,12,0.65)" }}>
+                  <li key={ri} className="flex items-start gap-3 text-sm" style={{ color: "#5a2200" }}>
                     <span className="font-display font-black text-[#FFB800] shrink-0 w-5 text-xs mt-0.5">
                       {String(ri + 1).padStart(2, "0")}.
                     </span>
@@ -208,7 +208,7 @@ function DetailPanel({ comp, onClose }: {
                 <div key={label} className="px-3 py-2.5"
                   style={{ background: "rgba(255,107,0,0.05)", border: "1px solid rgba(255,107,0,0.15)" }}>
                   <p className="text-[9px] uppercase tracking-wider mb-1 font-bold"
-                    style={{ color: "rgba(100,55,15,0.55)" }}>{label}</p>
+                    style={{ color: "#7a3a0a" }}>{label}</p>
                   <p className="text-sm font-semibold flex items-center gap-1.5" style={{ color }}>
                     <Icon className="w-3 h-3 opacity-70 shrink-0" />{value}
                   </p>
@@ -220,7 +220,7 @@ function DetailPanel({ comp, onClose }: {
             <div>
               <div className="flex items-center gap-2 mb-3">
                 <Trophy className="w-3.5 h-3.5 text-[#FFB800]" />
-                <h4 className="text-[9px] font-bold tracking-[0.22em] uppercase" style={{ color: "rgba(140,70,10,0.65)" }}>
+                <h4 className="text-[9px] font-bold tracking-[0.22em] uppercase" style={{ color: "#7a3a0a" }}>
                   Prize Breakdown
                 </h4>
               </div>
@@ -270,7 +270,7 @@ export default function CompetitionsPage() {
             <h1 className="font-display font-black text-[clamp(2.4rem,7vw,5.5rem)] text-[#1A0A00] leading-[0.9] tracking-tight mb-4">
               COMPETITIONS
             </h1>
-            <p className="text-sm max-w-lg leading-relaxed" style={{ color: "rgba(80,45,10,0.65)" }}>
+            <p className="text-sm max-w-lg leading-relaxed" style={{ color: "#5a2200" }}>
               Five high-stakes competitions with a combined prize pool of over ₹1,08,000.
             </p>
           </motion.div>
@@ -288,7 +288,7 @@ export default function CompetitionsPage() {
             ].map(({ v, l, c }) => (
               <div key={l} className="flex flex-col gap-0.5">
                 <span className="font-display font-black text-2xl" style={{ color: c }}>{v}</span>
-                <span className="text-[10px] tracking-[0.18em] uppercase" style={{ color: "rgba(100,55,15,0.55)" }}>{l}</span>
+                <span className="text-[10px] tracking-[0.18em] uppercase" style={{ color: "#7a3a0a" }}>{l}</span>
               </div>
             ))}
           </motion.div>

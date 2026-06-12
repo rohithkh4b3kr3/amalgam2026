@@ -57,7 +57,7 @@ export default function SpeakersPage() {
             <h1 className="font-display font-black text-[clamp(2.4rem,7vw,5.5rem)] text-[#1A0A00] leading-[0.9] tracking-tight">
               SPEAKERS
             </h1>
-            <p className="mt-4 text-[rgba(100,55,15,0.75)] max-w-xl text-base font-light leading-relaxed">
+            <p className="mt-4 text-[#5a2200] max-w-xl text-base font-light leading-relaxed">
               World-class researchers and industry leaders from IIT Madras, ISRO, DRDO, IISc, and Tata Steel —
               sharing breakthroughs at the frontier of materials science.
             </p>
@@ -75,7 +75,7 @@ export default function SpeakersPage() {
           ].map(({ v, l }) => (
             <div key={l} className="flex flex-col gap-0.5">
               <span className="font-display font-black text-2xl text-[#FF9A00]">{v}</span>
-              <span className="text-[10px] tracking-[0.22em] uppercase text-[rgba(100,55,15,0.6)]">{l}</span>
+              <span className="text-[10px] tracking-[0.22em] uppercase text-[#7a3a0a]">{l}</span>
             </div>
           ))}
         </div>
@@ -146,7 +146,7 @@ export default function SpeakersPage() {
                 {speaker.name}
               </h4>
               <p className="text-[#FF9A00] text-xs mb-0.5">{speaker.designation}</p>
-              <p className="text-[rgba(80,45,10,0.65)] text-xs mb-3">
+              <p className="text-[#5a2200] text-xs mb-3">
                 {ORG_SHORT[speaker.organization] ?? speaker.organization}
               </p>
 
@@ -154,12 +154,12 @@ export default function SpeakersPage() {
               <div className="h-px mb-3" style={{ background: "rgba(255,107,0,0.12)" }} />
 
               {/* Talk title */}
-              <p className="text-[rgba(100,55,15,0.75)] text-[11px] leading-snug mb-3 italic">
+              <p className="text-[#5a2200] text-[11px] leading-snug mb-3 italic">
                 &ldquo;{speaker.talkTitle}&rdquo;
               </p>
 
               {/* Date/time */}
-              <div className="flex flex-wrap gap-2 text-[10px] text-[rgba(100,55,15,0.6)]">
+              <div className="flex flex-wrap gap-2 text-[10px] text-[#7a3a0a]">
                 <span className="flex items-center gap-1">
                   <Calendar className="w-2.5 h-2.5 text-[#FF6B00]" />
                   {DAY_DATES[speaker.day]}
@@ -219,17 +219,17 @@ export default function SpeakersPage() {
 
               <div className="flex-1 min-w-0">
                 <div className="flex flex-wrap items-baseline gap-3 mb-1">
-                  <span className="font-display font-bold text-sm text-[#F0D898]">{speaker.name}</span>
+                  <span className="font-display font-bold text-sm text-[#D42000]">{speaker.name}</span>
                   <span className="text-[#FF9A00] text-xs">{speaker.designation}</span>
-                  <span className="text-[rgba(100,55,15,0.6)] text-xs flex items-center gap-1">
+                  <span className="text-[#7a3a0a] text-xs flex items-center gap-1">
                     <Building2 className="w-3 h-3" />{speaker.organization}
                   </span>
                 </div>
                 <p className="text-[#FF9A00] text-[11px] italic mb-2">{speaker.talkTitle}</p>
-                <p className="text-[rgba(80,45,10,0.65)] text-xs leading-relaxed">{speaker.bio}</p>
+                <p className="text-[#5a2200] text-xs leading-relaxed">{speaker.bio}</p>
               </div>
 
-              <div className="shrink-0 flex flex-row sm:flex-col gap-2 text-[10px] text-[rgba(100,55,15,0.6)]">
+              <div className="shrink-0 flex flex-row sm:flex-col gap-2 text-[10px] text-[#7a3a0a]">
                 <span className="flex items-center gap-1 whitespace-nowrap">
                   <Calendar className="w-3 h-3 text-[#FF6B00]" />{DAY_DATES[speaker.day]}
                 </span>
