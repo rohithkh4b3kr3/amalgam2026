@@ -7,13 +7,13 @@ function gearPts(cx: number, cy: number, R: number, r: number, n: number) {
   return Array.from({ length: n * 2 }, (_, i) => {
     const a   = (i / (n * 2)) * Math.PI * 2 - Math.PI / 2;
     const rad = i % 2 === 0 ? R : r;
-    return `${cx + rad * Math.cos(a)},${cy + rad * Math.sin(a)}`;
+    return `${(cx + rad * Math.cos(a)).toFixed(4)},${(cy + rad * Math.sin(a)).toFixed(4)}`;
   }).join(" ");
 }
 function hexPts(cx: number, cy: number, r: number, rot = 0) {
   return Array.from({ length: 6 }, (_, i) => {
     const a = (i / 6) * Math.PI * 2 + rot;
-    return `${cx + r * Math.cos(a)},${cy + r * Math.sin(a)}`;
+    return `${(cx + r * Math.cos(a)).toFixed(4)},${(cy + r * Math.sin(a)).toFixed(4)}`;
   }).join(" ");
 }
 
@@ -48,8 +48,8 @@ function SvgGear({ size = 200, uid = "sg0", teeth = 14, innerFrac = 0.82 }: {
       {Array.from({ length: 6 }, (_, i) => {
         const a = (i / 6) * Math.PI * 2;
         return <line key={i}
-          x1={c + bore * 1.1 * Math.cos(a)} y1={c + bore * 1.1 * Math.sin(a)}
-          x2={c + c * 0.5 * Math.cos(a)}    y2={c + c * 0.5 * Math.sin(a)}
+          x1={+(c + bore * 1.1 * Math.cos(a)).toFixed(4)} y1={+(c + bore * 1.1 * Math.sin(a)).toFixed(4)}
+          x2={+(c + c * 0.5 * Math.cos(a)).toFixed(4)}    y2={+(c + c * 0.5 * Math.sin(a)).toFixed(4)}
           stroke="rgba(180,120,50,0.08)" strokeWidth="1.2" />;
       })}
       <circle cx={c} cy={c} r={bore} fill={`url(#${uid}-bore)`} />

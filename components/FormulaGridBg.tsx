@@ -36,8 +36,13 @@ export default function FormulaGridBg() {
   const lastCell     = useRef(-1);
 
   useEffect(() => {
-    setMounted(true);
-    return () => { trailTimers.current.forEach(t => { if (t) clearTimeout(t); }); };
+    const timers = trailTimers.current;
+    const frame = requestAnimationFrame(() => setMounted(true));
+
+    return () => {
+      cancelAnimationFrame(frame);
+      timers.forEach(t => { if (t) clearTimeout(t); });
+    };
   }, []);
 
   const onMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
@@ -116,11 +121,11 @@ export default function FormulaGridBg() {
             width: "max-content",
             opacity: 0,
             background: "#0A0600",
-            boxShadow: "inset 0 0 0 1px #FF9A00",
+            boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.9), 0 0 16px rgba(255,255,255,0.32)",
           }}
         >
-          <span className="font-mono text-[10px] text-[#FF9A00] whitespace-nowrap select-none tracking-tight px-1.5" />
-          <div className="absolute bottom-0 right-0 w-1.5 h-1.5 bg-[#FFB800]" />
+          <span className="font-mono text-[10px] text-white whitespace-nowrap select-none tracking-tight px-1.5" />
+          <div className="absolute bottom-0 right-0 w-1.5 h-1.5 bg-white" />
         </div>
       ))}
     </div>
