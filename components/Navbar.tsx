@@ -70,7 +70,7 @@ export default function Navbar() {
       {/* ── HEADER ─────────────────────────────────────────────── */}
       <header
         className={`fixed top-0 left-0 w-full z-[100] flex items-center justify-between px-6 md:px-10 py-4 transition-colors duration-300 ${
-          scrolled ? "bg-[rgba(2,2,5,0.88)] backdrop-blur-xl" : "bg-transparent"
+          scrolled ? "bg-[rgba(255,255,255,0.95)] backdrop-blur-xl border-b border-[rgba(255,107,0,0.12)]" : "bg-transparent"
         }`}
       >
         {/* Logo */}
@@ -86,10 +86,10 @@ export default function Navbar() {
             />
           </div>
           <div className="flex flex-col leading-none gap-[3px]">
-            <span className="text-xl md:text-2xl font-black tracking-[0.18em] text-white font-display">
+            <span className="text-xl md:text-2xl font-black tracking-[0.18em] text-[#1A0A00] font-display">
               AMALGAM
             </span>
-            <span className="text-[8px] md:text-[9px] tracking-[0.35em] text-[rgba(255,255,255,0.45)] group-hover:text-[#FF9A00] transition-colors duration-300">
+            <span className="text-[8px] md:text-[9px] tracking-[0.35em] text-[rgba(80,40,0,0.5)] group-hover:text-[#FF6B00] transition-colors duration-300">
               IIT MADRAS · MME
             </span>
           </div>
@@ -99,12 +99,12 @@ export default function Navbar() {
         <motion.button
           whileTap={{ scale: 0.95 }}
           onClick={() => setOpen((p) => !p)}
-          className={`w-12 h-12 rounded-md z-[110] border border-white/10 flex items-center justify-center text-2xl transition-all duration-300 ${
+          className={`w-12 h-12 rounded-md z-[110] border flex items-center justify-center text-2xl transition-all duration-300 ${
             open
-              ? "bg-white text-black"
+              ? "bg-[#CC4400] text-white border-[#CC4400]"
               : scrolled
-                ? "bg-white/10 text-white"
-                : "bg-white/5 text-[#FF6B00]"
+                ? "bg-[rgba(255,107,0,0.08)] text-[#CC4400] border-[rgba(255,107,0,0.25)]"
+                : "bg-[rgba(255,107,0,0.06)] text-[#FF6B00] border-[rgba(255,107,0,0.2)]"
           }`}
           aria-label="Toggle menu"
         >
@@ -118,7 +118,7 @@ export default function Navbar() {
         animate={open ? "open" : "closed"}
         variants={menuVariants}
         style={{ transform: "translateZ(0)" }}
-        className="fixed top-0 left-0 w-full h-full z-[90] flex justify-center items-center will-change-transform hammered-bg bg-[rgba(5,4,2,0.98)]"
+        className="fixed top-0 left-0 w-full h-full z-[90] flex justify-center items-center will-change-transform hammered-bg bg-[rgba(255,252,248,0.98)]"
       >
 
         {/* Ambient glow blob */}
@@ -140,7 +140,7 @@ export default function Navbar() {
                   group uppercase tracking-[0.22em] font-display font-black
                   text-2xl sm:text-3xl md:text-4xl
                   transition-colors duration-300 relative inline-block py-1
-                  ${active === href ? "text-white" : "text-[rgba(255,154,0,0.65)] hover:text-white"}
+                  ${active === href ? "text-[#1A0A00]" : "text-[rgba(180,80,0,0.6)] hover:text-[#1A0A00]"}
                 `}
               >
                 <span className="relative z-10">{label}</span>

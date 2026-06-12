@@ -25,8 +25,8 @@ function CapacityBar({ capacity, registered }: { capacity: number; registered: n
   return (
     <div>
       <div className="flex items-center justify-between mb-1.5">
-        <span className="text-[10px] tracking-[0.18em] uppercase font-bold" style={{ color: "rgba(140,112,70,0.5)" }}>Capacity</span>
-        <span className="text-xs font-display" style={{ color: "rgba(162,133,87,0.6)" }}>{registered}/{capacity}</span>
+        <span className="text-[10px] tracking-[0.18em] uppercase font-bold" style={{ color: "rgba(100,60,20,0.55)" }}>Capacity</span>
+        <span className="text-xs font-display" style={{ color: "rgba(100,55,15,0.65)" }}>{registered}/{capacity}</span>
       </div>
       <div className="h-1.5 rounded-none overflow-hidden" style={{ background: "rgba(255,107,0,0.08)", border: "1px solid rgba(255,107,0,0.12)" }}>
         <motion.div initial={{ width: 0 }} whileInView={{ width: `${pct}%` }} viewport={{ once: true }}
@@ -51,7 +51,7 @@ function WorkshopCard({ ws, index }: { ws: typeof WORKSHOPS[0]; index: number })
     >
       {/* Shadow plate */}
       <div className="absolute inset-0 translate-y-1.5 translate-x-1.5"
-        style={{ background: "rgba(0,0,0,0.45)", filter: "blur(6px)" }} />
+        style={{ background: "rgba(200,120,60,0.12)", filter: "blur(6px)" }} />
 
       <div className="relative forge-plate angled-card overflow-hidden">
 
@@ -70,7 +70,7 @@ function WorkshopCard({ ws, index }: { ws: typeof WORKSHOPS[0]; index: number })
               <div className="flex flex-wrap items-center gap-2 mb-2">
                 {/* Workshop number */}
                 <div className="w-8 h-8 rounded flex items-center justify-center font-display font-black text-xs"
-                  style={{ background: "linear-gradient(135deg,#1a1008,#2a1a0a)", border: "1px solid rgba(255,154,0,0.3)", color: "#FF9A00" }}>
+                  style={{ background: "linear-gradient(135deg,#fff5ee,#ffece0)", border: "1px solid rgba(255,154,0,0.35)", color: "#CC4400" }}>
                   W{String(index + 1).padStart(2, "0")}
                 </div>
 
@@ -89,7 +89,7 @@ function WorkshopCard({ ws, index }: { ws: typeof WORKSHOPS[0]; index: number })
                 }
               </div>
 
-              <h3 className="font-display font-black text-lg md:text-xl text-white leading-tight">{ws.title}</h3>
+              <h3 className="font-display font-black text-lg md:text-xl text-[#1A0A00] leading-tight">{ws.title}</h3>
             </div>
 
             <Link href={isFull ? "#" : "/register"}
@@ -106,7 +106,7 @@ function WorkshopCard({ ws, index }: { ws: typeof WORKSHOPS[0]; index: number })
           {/* Divider */}
           <div className="h-px mb-4" style={{ background: "linear-gradient(90deg, rgba(255,107,0,0.25), transparent)" }} />
 
-          <p className="text-sm leading-relaxed mb-5" style={{ color: "rgba(188,160,112,0.65)" }}>{ws.description}</p>
+          <p className="text-sm leading-relaxed mb-5" style={{ color: "rgba(80,45,10,0.65)" }}>{ws.description}</p>
 
           <CapacityBar capacity={ws.capacity} registered={ws.registered} />
 
@@ -117,7 +117,7 @@ function WorkshopCard({ ws, index }: { ws: typeof WORKSHOPS[0]; index: number })
               { icon: MapPin, value: ws.venue,                      color: "text-[#FF9A00]" },
               { icon: Wrench, value: ws.instructors,                color: "text-[#FF6B00]" },
             ].map(({ icon: Icon, value, color }) => (
-              <div key={value} className="flex items-start gap-2 text-xs" style={{ color: "rgba(178,148,98,0.6)" }}>
+              <div key={value} className="flex items-start gap-2 text-xs" style={{ color: "rgba(100,55,15,0.6)" }}>
                 <Icon className={`w-3.5 h-3.5 ${color} shrink-0 mt-0.5`} />
                 <span className="leading-tight">{value}</span>
               </div>
@@ -126,8 +126,8 @@ function WorkshopCard({ ws, index }: { ws: typeof WORKSHOPS[0]; index: number })
 
           {/* Prerequisites */}
           <div className="px-4 py-3 text-xs"
-            style={{ background: "rgba(255,107,0,0.04)", border: "1px solid rgba(255,107,0,0.1)", color: "rgba(162,133,87,0.62)" }}>
-            <span className="font-bold uppercase tracking-wider text-[9px]" style={{ color: "rgba(208,168,98,0.72)" }}>Prerequisites: </span>
+            style={{ background: "rgba(255,107,0,0.05)", border: "1px solid rgba(255,107,0,0.12)", color: "rgba(100,55,15,0.65)" }}>
+            <span className="font-bold uppercase tracking-wider text-[9px]" style={{ color: "rgba(140,70,10,0.75)" }}>Prerequisites: </span>
             {ws.prerequisites}
           </div>
         </div>
@@ -146,7 +146,7 @@ export default function WorkshopsPage() {
   const bgRef = useParallax(0.45);
 
   return (
-    <div className="min-h-screen" style={{ background: "#020100" }}>
+    <div className="min-h-screen" style={{ background: "#FFFFFF" }}>
 
       {/* ── HERO ──────────────────────────────────────────── */}
       <section className="relative pt-32 pb-20 overflow-hidden min-h-[480px] flex items-center">
@@ -154,17 +154,17 @@ export default function WorkshopsPage() {
           <ForgeBackground intensity={0.75} />
         </div>
         <div className="absolute bottom-0 left-0 right-0 h-24 pointer-events-none"
-          style={{ background: "linear-gradient(to top, #020100, transparent)" }} />
+          style={{ background: "linear-gradient(to top, #FFFFFF, transparent)" }} />
 
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 w-full">
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
             <span className="text-[#FF6B00] tracking-[0.55em] text-[11px] uppercase block mb-5 font-bold">
               Workshops
             </span>
-            <h1 className="font-display font-black text-[clamp(2.4rem,7vw,5.5rem)] text-white leading-[0.9] tracking-tight mb-4">
+            <h1 className="font-display font-black text-[clamp(2.4rem,7vw,5.5rem)] text-[#1A0A00] leading-[0.9] tracking-tight mb-4">
               WORKSHOPS
             </h1>
-            <p className="text-sm max-w-lg leading-relaxed" style={{ color: "rgba(185,158,110,0.65)" }}>
+            <p className="text-sm max-w-lg leading-relaxed" style={{ color: "rgba(80,45,10,0.65)" }}>
               Five intensive hands-on workshops: XRD, SEM/TEM, DFT simulation, 3D metal printing, and electrochemical analysis.
             </p>
           </motion.div>
@@ -178,7 +178,7 @@ export default function WorkshopsPage() {
             ].map(({ v, l }) => (
               <div key={l} className="flex flex-col gap-0.5">
                 <span className="font-display font-black text-2xl text-[#FF9A00]">{v}</span>
-                <span className="text-[10px] tracking-[0.18em] uppercase" style={{ color: "rgba(155,128,82,0.55)" }}>{l}</span>
+                <span className="text-[10px] tracking-[0.18em] uppercase" style={{ color: "rgba(100,60,20,0.6)" }}>{l}</span>
               </div>
             ))}
           </motion.div>
@@ -189,7 +189,7 @@ export default function WorkshopsPage() {
 
       {/* ── Day filter — sticky ────────────────────────────── */}
       <div className="sticky top-16 z-30 backdrop-blur-xl border-b border-[rgba(255,184,0,0.1)] py-3"
-        style={{ background: "rgba(2,1,0,0.97)" }}>
+        style={{ background: "rgba(255,255,255,0.97)" }}>
         <div className="max-w-4xl mx-auto px-4 flex gap-2 flex-wrap justify-center">
           {([0, 1, 2, 3] as const).map((d) => {
             const label = d === 0 ? "All Days" : `Day ${d} — ${DAY_LABELS[d as 1|2|3]}`;
@@ -204,7 +204,7 @@ export default function WorkshopsPage() {
                 style={{
                   background: active ? "linear-gradient(135deg,#CC8800,#FFB800)" : "transparent",
                   clipPath: "polygon(6px 0,100% 0,100% calc(100% - 6px),calc(100% - 6px) 100%,0 100%,0 6px)",
-                  color: active ? undefined : "rgba(162,133,87,0.6)",
+                  color: active ? undefined : "rgba(120,60,10,0.65)",
                 }}>
                 {label}
               </button>

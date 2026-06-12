@@ -53,8 +53,8 @@ function CompCard({ comp, index, isSelected, onClick }: {
       transition={{ duration: 0.6, delay: index * 0.07, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
       className="group relative w-full text-left overflow-hidden transition-all duration-300 focus:outline-none"
       style={{
-        background: isSelected ? "rgba(14,9,2,0.98)" : "rgba(10,7,2,0.92)",
-        border: `1px solid ${isSelected ? "rgba(255,154,0,0.45)" : "rgba(255,107,0,0.12)"}`,
+        background: isSelected ? "rgba(255,245,235,0.98)" : "rgba(255,250,244,0.95)",
+        border: `1px solid ${isSelected ? "rgba(255,107,0,0.45)" : "rgba(255,107,0,0.15)"}`,
       }}
       whileHover={{ scale: 1.01 }}
     >
@@ -79,7 +79,7 @@ function CompCard({ comp, index, isSelected, onClick }: {
         </div>
 
         {/* Title */}
-        <h3 className="font-display font-black text-[15px] text-white leading-snug mb-4 group-hover:text-[rgba(255,230,180,0.95)] transition-colors duration-200">
+        <h3 className="font-display font-black text-[15px] text-[#1A0A00] leading-snug mb-4 group-hover:text-[#CC4400] transition-colors duration-200">
           {comp.title}
         </h3>
 
@@ -91,11 +91,11 @@ function CompCard({ comp, index, isSelected, onClick }: {
 
         {/* Meta: team + deadline */}
         <div className="flex flex-col gap-1.5 mb-4">
-          <div className="flex items-center gap-1.5 text-[11px]" style={{ color: "rgba(178,148,98,0.6)" }}>
+          <div className="flex items-center gap-1.5 text-[11px]" style={{ color: "rgba(100,55,15,0.6)" }}>
             <Users className="w-3 h-3 shrink-0" />
             <span>{comp.teamSize}</span>
           </div>
-          <div className="flex items-center gap-1.5 text-[11px]" style={{ color: "rgba(178,148,98,0.6)" }}>
+          <div className="flex items-center gap-1.5 text-[11px]" style={{ color: "rgba(100,55,15,0.6)" }}>
             <Calendar className="w-3 h-3 shrink-0" />
             <span>Due {comp.registrationDeadline}</span>
           </div>
@@ -136,7 +136,7 @@ function DetailPanel({ comp, onClose }: {
   return (
     <div className="relative overflow-hidden"
       style={{
-        background: "rgba(10,6,1,0.99)",
+        background: "rgba(255,248,240,0.99)",
         border: "1px solid rgba(255,107,0,0.22)",
         marginTop: 2,
       }}>
@@ -151,7 +151,7 @@ function DetailPanel({ comp, onClose }: {
           <div>
             <div className="text-[9px] tracking-[0.28em] uppercase font-bold mb-1.5"
               style={{ color: "rgba(255,107,0,0.5)" }}>{comp.domain}</div>
-            <h2 className="font-display font-black text-2xl md:text-3xl text-white leading-tight">{comp.title}</h2>
+            <h2 className="font-display font-black text-2xl md:text-3xl text-[#1A0A00] leading-tight">{comp.title}</h2>
           </div>
           <button onClick={onClose}
             className="shrink-0 p-2 transition-colors duration-200 hover:bg-[rgba(255,107,0,0.1)]"
@@ -165,28 +165,28 @@ function DetailPanel({ comp, onClose }: {
 
           {/* Left — description + eligibility + rounds */}
           <div className="lg:col-span-3 flex flex-col gap-6">
-            <p className="text-sm leading-relaxed" style={{ color: "rgba(188,162,118,0.72)" }}>{comp.description}</p>
+            <p className="text-sm leading-relaxed" style={{ color: "rgba(80,40,10,0.7)" }}>{comp.description}</p>
 
             <div>
               <div className="flex items-center gap-2 mb-2">
                 <Shield className="w-3.5 h-3.5 text-[#FF9A00]" />
-                <h4 className="text-[9px] font-bold tracking-[0.22em] uppercase" style={{ color: "rgba(198,162,98,0.65)" }}>
+                <h4 className="text-[9px] font-bold tracking-[0.22em] uppercase" style={{ color: "rgba(140,70,10,0.65)" }}>
                   Eligibility
                 </h4>
               </div>
-              <p className="text-sm pl-5" style={{ color: "rgba(175,148,108,0.62)" }}>{comp.eligibility}</p>
+              <p className="text-sm pl-5" style={{ color: "rgba(90,50,12,0.65)" }}>{comp.eligibility}</p>
             </div>
 
             <div>
               <div className="flex items-center gap-2 mb-3">
                 <Zap className="w-3.5 h-3.5 text-[#FF6B00]" />
-                <h4 className="text-[9px] font-bold tracking-[0.22em] uppercase" style={{ color: "rgba(198,162,98,0.65)" }}>
+                <h4 className="text-[9px] font-bold tracking-[0.22em] uppercase" style={{ color: "rgba(140,70,10,0.65)" }}>
                   Competition Rounds
                 </h4>
               </div>
               <ol className="flex flex-col gap-2 pl-2">
                 {comp.rounds.map((round, ri) => (
-                  <li key={ri} className="flex items-start gap-3 text-sm" style={{ color: "rgba(175,148,108,0.62)" }}>
+                  <li key={ri} className="flex items-start gap-3 text-sm" style={{ color: "rgba(90,50,12,0.65)" }}>
                     <span className="font-display font-black text-[#FFB800] shrink-0 w-5 text-xs mt-0.5">
                       {String(ri + 1).padStart(2, "0")}.
                     </span>
@@ -206,9 +206,9 @@ function DetailPanel({ comp, onClose }: {
                 { icon: Calendar, label: "Deadline",  value: comp.registrationDeadline, color: "#FF6B00" },
               ].map(({ icon: Icon, label, value, color }) => (
                 <div key={label} className="px-3 py-2.5"
-                  style={{ background: "rgba(255,184,0,0.04)", border: "1px solid rgba(255,184,0,0.1)" }}>
+                  style={{ background: "rgba(255,107,0,0.05)", border: "1px solid rgba(255,107,0,0.15)" }}>
                   <p className="text-[9px] uppercase tracking-wider mb-1 font-bold"
-                    style={{ color: "rgba(138,110,72,0.5)" }}>{label}</p>
+                    style={{ color: "rgba(100,55,15,0.55)" }}>{label}</p>
                   <p className="text-sm font-semibold flex items-center gap-1.5" style={{ color }}>
                     <Icon className="w-3 h-3 opacity-70 shrink-0" />{value}
                   </p>
@@ -220,7 +220,7 @@ function DetailPanel({ comp, onClose }: {
             <div>
               <div className="flex items-center gap-2 mb-3">
                 <Trophy className="w-3.5 h-3.5 text-[#FFB800]" />
-                <h4 className="text-[9px] font-bold tracking-[0.22em] uppercase" style={{ color: "rgba(198,162,98,0.65)" }}>
+                <h4 className="text-[9px] font-bold tracking-[0.22em] uppercase" style={{ color: "rgba(140,70,10,0.65)" }}>
                   Prize Breakdown
                 </h4>
               </div>
@@ -252,7 +252,7 @@ export default function CompetitionsPage() {
   for (let i = 0; i < COMPETITIONS.length; i += 3) rows.push(COMPETITIONS.slice(i, i + 3));
 
   return (
-    <div className="min-h-screen" style={{ background: "#020100" }}>
+    <div className="min-h-screen" style={{ background: "#FFFFFF" }}>
 
       {/* ── HERO ────────────────────────────────────────────── */}
       <section className="relative pt-32 pb-20 overflow-hidden min-h-[500px] flex items-center">
@@ -260,17 +260,17 @@ export default function CompetitionsPage() {
           <ForgeBackground intensity={0.85} showAnvil />
         </div>
         <div className="absolute bottom-0 left-0 right-0 h-24 pointer-events-none"
-          style={{ background: "linear-gradient(to top, #020100, transparent)" }} />
+          style={{ background: "linear-gradient(to top, #FFFFFF, transparent)" }} />
 
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 w-full">
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
             <span className="text-[#FF6B00] tracking-[0.55em] text-[11px] uppercase block mb-5 font-bold">
               Competitions
             </span>
-            <h1 className="font-display font-black text-[clamp(2.4rem,7vw,5.5rem)] text-white leading-[0.9] tracking-tight mb-4">
+            <h1 className="font-display font-black text-[clamp(2.4rem,7vw,5.5rem)] text-[#1A0A00] leading-[0.9] tracking-tight mb-4">
               COMPETITIONS
             </h1>
-            <p className="text-sm max-w-lg leading-relaxed" style={{ color: "rgba(185,158,110,0.65)" }}>
+            <p className="text-sm max-w-lg leading-relaxed" style={{ color: "rgba(80,45,10,0.65)" }}>
               Five high-stakes competitions with a combined prize pool of over ₹1,08,000.
             </p>
           </motion.div>
@@ -288,7 +288,7 @@ export default function CompetitionsPage() {
             ].map(({ v, l, c }) => (
               <div key={l} className="flex flex-col gap-0.5">
                 <span className="font-display font-black text-2xl" style={{ color: c }}>{v}</span>
-                <span className="text-[10px] tracking-[0.18em] uppercase" style={{ color: "rgba(145,118,75,0.5)" }}>{l}</span>
+                <span className="text-[10px] tracking-[0.18em] uppercase" style={{ color: "rgba(100,55,15,0.55)" }}>{l}</span>
               </div>
             ))}
           </motion.div>

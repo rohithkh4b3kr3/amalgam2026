@@ -16,7 +16,7 @@ const ACCOUNT = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-[rgba(255,107,0,0.1)] bg-[rgba(5,5,3,0.97)] backdrop-blur-sm mt-20">
+    <footer className="border-t border-[rgba(255,107,0,0.15)] bg-[rgba(255,250,244,0.98)] backdrop-blur-sm mt-20">
 
       {/* Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16 grid grid-cols-1 md:grid-cols-4 gap-12">
@@ -34,22 +34,22 @@ export default function Footer() {
               <Flame className="w-4 h-4 text-[#FF6B00]" />
             </div>
             <div className="flex flex-col leading-none gap-[3px]">
-              <span className="font-display font-black text-lg tracking-[0.18em] text-metallic">AMALGAM</span>
-              <span className="text-[8px] tracking-[0.32em] uppercase text-[rgba(160,140,110,0.4)]">IIT Madras · MME</span>
+              <span className="font-display font-black text-lg tracking-[0.18em] text-[#1A0A00]">AMALGAM</span>
+              <span className="text-[8px] tracking-[0.32em] uppercase text-[rgba(80,40,0,0.45)]">IIT Madras · MME</span>
             </div>
           </div>
 
-          <p className="text-[rgba(160,140,110,0.55)] text-sm leading-relaxed max-w-xs">
+          <p className="text-[rgba(80,45,10,0.65)] text-sm leading-relaxed max-w-xs">
             The annual techno-cultural fest of the Department of Metallurgical &amp; Materials
             Engineering, IIT Madras.
           </p>
 
           <div className="flex flex-col gap-2">
-            <div className="flex items-center gap-2 text-sm text-[rgba(160,140,110,0.45)]">
+            <div className="flex items-center gap-2 text-sm text-[rgba(80,45,10,0.55)]">
               <MapPin className="w-3.5 h-3.5 text-[#FF9A00] shrink-0" />
               IIT Madras, Chennai — 600036
             </div>
-            <div className="flex items-center gap-2 text-sm text-[rgba(160,140,110,0.45)]">
+            <div className="flex items-center gap-2 text-sm text-[rgba(80,45,10,0.55)]">
               <Mail className="w-3.5 h-3.5 text-[#FF9A00] shrink-0" />
               amalgam@mme.iitm.ac.in
             </div>
@@ -66,7 +66,7 @@ export default function Footer() {
               <li key={href}>
                 <Link
                   href={href}
-                  className="text-sm text-[rgba(160,140,110,0.55)] hover:text-[#FF9A00] transition-colors duration-200"
+                  className="text-sm text-[rgba(80,45,10,0.65)] hover:text-[#FF9A00] transition-colors duration-200"
                 >
                   {label}
                 </Link>
@@ -85,7 +85,7 @@ export default function Footer() {
               <li key={href}>
                 <Link
                   href={href}
-                  className="text-sm text-[rgba(160,140,110,0.55)] hover:text-[#FF9A00] transition-colors duration-200"
+                  className="text-sm text-[rgba(80,45,10,0.65)] hover:text-[#FF9A00] transition-colors duration-200"
                 >
                   {label}
                 </Link>
@@ -96,7 +96,7 @@ export default function Footer() {
                 href="https://mme.iitm.ac.in"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 text-sm text-[rgba(160,140,110,0.55)] hover:text-[#FF9A00] transition-colors duration-200"
+                className="inline-flex items-center gap-1 text-sm text-[rgba(80,45,10,0.65)] hover:text-[#FF9A00] transition-colors duration-200"
               >
                 Dept. Website <ExternalLink className="w-3 h-3" />
               </a>
@@ -108,10 +108,10 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="divider-electric mx-6" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-2">
-        <p className="text-xs text-[rgba(160,140,110,0.28)]">
+        <p className="text-xs text-[rgba(80,45,10,0.4)]">
           © 2026 AMALGAM — IIT Madras MME Dept. All rights reserved.
         </p>
-        <p className="text-xs text-[rgba(160,140,110,0.28)]">Built by the AMALGAM Web Team</p>
+        <p className="text-xs text-[rgba(80,45,10,0.4)]">Built by the AMALGAM Web Team</p>
       </div>
     </footer>
   );

@@ -86,8 +86,8 @@ function CountUpStat({
       <span className={`font-display font-black text-4xl md:text-5xl tabular-nums ${color}`}>
         {formatted}
       </span>
-      <span className="text-xs text-[rgba(120,90,50,0.65)] tracking-wide text-center">{sub}</span>
-      <span className="text-[10px] font-bold tracking-[0.18em] uppercase text-[rgba(200,170,120,0.7)] mt-0.5">{label}</span>
+      <span className="text-xs text-[rgba(80,45,10,0.6)] tracking-wide text-center">{sub}</span>
+      <span className="text-[10px] font-bold tracking-[0.18em] uppercase text-[rgba(100,55,15,0.65)] mt-0.5">{label}</span>
     </motion.div>
   );
 }
@@ -563,7 +563,7 @@ export default function HomePage() {
 
         {/* Bottom fade */}
         <div className="absolute bottom-0 left-0 right-0 h-64 pointer-events-none z-10"
-          style={{ background: "linear-gradient(to top, rgba(2,1,0,0.95), rgba(2,1,0,0.5) 40%, transparent)" }} />
+          style={{ background: "linear-gradient(to top, rgba(255,255,255,0.95), rgba(255,255,255,0.5) 40%, transparent)" }} />
 
         {/* Foreground Parallax Orbs */}
         <div className="absolute inset-0 pointer-events-none z-30 overflow-hidden">
@@ -609,7 +609,7 @@ export default function HomePage() {
                     <motion.span
                       key={i}
                       variants={titleLetter}
-                      className="font-display font-extrabold text-white inline-block"
+                      className="font-display font-extrabold text-[#1A0A00] inline-block"
                       style={{
                         fontSize: "clamp(3rem,10vw,7.5rem)",
                         transformOrigin: "bottom center",
@@ -625,7 +625,7 @@ export default function HomePage() {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.7, delay: 0.85 }}
-                  className="font-light text-[rgba(200,180,140,0.5)] mt-2"
+                  className="font-light text-[rgba(80,40,10,0.55)] mt-2"
                   style={{ fontSize: "clamp(1rem,3.5vw,2.6rem)", letterSpacing: "0.14em" }}
                 >
                   WHERE{" "}
@@ -643,7 +643,7 @@ export default function HomePage() {
                 initial={{ opacity: 0, x: -16 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 1.1 }}
-                className="text-[rgba(160,130,90,0.7)] text-sm md:text-[0.95rem] max-w-md leading-relaxed border-l-2 border-[rgba(200,100,0,0.35)] pl-5 mb-8 mt-5"
+                className="text-[rgba(80,40,10,0.65)] text-sm md:text-[0.95rem] max-w-md leading-relaxed border-l-2 border-[rgba(200,100,0,0.35)] pl-5 mb-8 mt-5"
               >
                 {FEST_SUBTITLE}
               </motion.p>
@@ -682,7 +682,7 @@ export default function HomePage() {
               className="hidden lg:flex flex-col gap-2 shrink-0 w-[176px] mt-16"
               style={{
                 border: "1px solid rgba(200,100,0,0.18)",
-                background: "rgba(8,5,2,0.85)",
+                background: "rgba(255,248,240,0.95)",
                 backdropFilter: "blur(16px)",
                 padding: "18px 16px",
               }}
@@ -693,7 +693,7 @@ export default function HomePage() {
               </div>
 
               <div className="flex flex-col gap-0.5 py-2 border-b border-[rgba(200,100,0,0.07)]">
-                <span className="font-display text-[8px] tracking-[0.18em] uppercase text-[rgba(160,100,40,0.5)]">Forge Temp</span>
+                <span className="font-display text-[8px] tracking-[0.18em] uppercase text-[rgba(120,60,10,0.55)]">Forge Temp</span>
                 <div className="flex items-baseline gap-1">
                   <span ref={tempRef} className="font-display font-black text-[1.4rem] text-[#D47800] leading-none tabular-nums">1450</span>
                   <span className="text-[9px] text-[rgba(180,100,0,0.45)]">°C</span>
@@ -701,7 +701,7 @@ export default function HomePage() {
               </div>
 
               <div className="flex flex-col gap-0.5 py-2 border-b border-[rgba(200,100,0,0.07)]">
-                <span className="font-display text-[8px] tracking-[0.18em] uppercase text-[rgba(160,100,40,0.5)]">Hardness</span>
+                <span className="font-display text-[8px] tracking-[0.18em] uppercase text-[rgba(120,60,10,0.55)]">Hardness</span>
                 <div className="flex items-baseline gap-1">
                   <span ref={hardnessRef} className="font-display font-black text-[1.4rem] text-[#B08000] leading-none tabular-nums">58</span>
                   <span className="text-[9px] text-[rgba(160,120,0,0.45)]">HRC</span>
@@ -710,7 +710,7 @@ export default function HomePage() {
 
               {TELEM_STATIC.map(({ id, label, value }) => (
                 <div key={id} className="flex flex-col gap-0.5 py-1.5">
-                  <span className="font-display text-[8px] tracking-[0.18em] uppercase text-[rgba(160,100,40,0.45)]">{label}</span>
+                  <span className="font-display text-[8px] tracking-[0.18em] uppercase text-[rgba(120,60,10,0.5)]">{label}</span>
                   <span className="font-display text-[11px] font-bold text-[rgba(200,170,120,0.75)] leading-none">{value}</span>
                 </div>
               ))}
@@ -723,7 +723,7 @@ export default function HomePage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.8 }}
-          className="absolute bottom-0 left-0 right-0 z-20 border-t border-[rgba(180,100,0,0.08)] bg-[rgba(2,1,0,0.85)] backdrop-blur-sm"
+          className="absolute bottom-0 left-0 right-0 z-20 border-t border-[rgba(255,107,0,0.1)] bg-[rgba(255,255,255,0.9)] backdrop-blur-sm"
         >
           <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 py-4 flex items-center gap-6 md:gap-10 overflow-x-auto">
             {STATS.map((s, i) => (
@@ -781,14 +781,14 @@ export default function HomePage() {
             <div className="font-display font-black text-3xl md:text-4xl leading-tight mb-6">
               <SweepHeading><span className="text-metallic">Three Days of</span></SweepHeading>
               <SweepHeading delay={0.12}><span className="text-forge">Advanced Materials</span></SweepHeading>
-              <SweepHeading delay={0.24}><span className="text-white">&amp; Innovation</span></SweepHeading>
+              <SweepHeading delay={0.24}><span className="text-[#1A0A00]">&amp; Innovation</span></SweepHeading>
             </div>
-            <p className="text-[rgba(160,130,90,0.7)] leading-relaxed mb-4">
+            <p className="text-[rgba(80,40,10,0.65)] leading-relaxed mb-4">
               AMALGAM is the flagship annual fest of the Metallurgical &amp; Materials Engineering
               Department at IIT Madras. Students, researchers, and industry professionals converge for
               workshops, competitions, and inspiring keynotes.
             </p>
-            <p className="text-[rgba(120,95,60,0.55)] leading-relaxed">
+            <p className="text-[rgba(80,40,10,0.5)] leading-relaxed">
               From X-ray diffraction labs to computational materials simulations — AMALGAM offers an
               unparalleled platform to push the boundaries of materials science.
             </p>
@@ -824,7 +824,7 @@ export default function HomePage() {
       {/* ══════════════════════════════════════════════════════════
           STATS BAR — animated count-up
       ══════════════════════════════════════════════════════════ */}
-      <section className="relative border-y border-[rgba(180,100,0,0.1)] overflow-hidden" style={{ background: "rgba(2,1,0,0.55)" }}>
+      <section className="relative border-y border-[rgba(180,100,0,0.1)] overflow-hidden" style={{ background: "rgba(255,248,242,0.97)" }}>
         <SectionForgeBg variant="stats" />
         <div className="absolute inset-[-20%] parallax-bg pointer-events-none" data-parallax-y="120" data-parallax-x="-30">
           <div className="absolute inset-0 hex-grid opacity-40" />
@@ -856,7 +856,7 @@ export default function HomePage() {
           viewport={{ once: true }}
           className="text-center mb-12 relative z-10"
         >
-          <h2 className="font-display font-black text-2xl md:text-3xl text-metallic mb-2">Forge Sectors</h2>
+          <h2 className="font-display font-black text-2xl md:text-3xl text-[#1A0A00] mb-2">Forge Sectors</h2>
           <p className="text-[rgba(120,90,50,0.55)] text-sm">Access the various sectors of the fest</p>
         </motion.div>
 
@@ -880,8 +880,8 @@ export default function HomePage() {
                     <Icon className={`w-5 h-5 ${color}`} />
                   </motion.div>
                   <div>
-                    <h3 className="font-display font-bold text-sm text-[#D4A860] mb-1.5 tracking-wide">{label}</h3>
-                    <p className="text-[rgba(120,90,50,0.6)] text-sm leading-relaxed">{desc}</p>
+                    <h3 className="font-display font-bold text-sm text-[#CC4400] mb-1.5 tracking-wide">{label}</h3>
+                    <p className="text-[rgba(80,40,10,0.6)] text-sm leading-relaxed">{desc}</p>
                   </div>
                   <div className={`flex items-center gap-1 text-xs font-bold tracking-wide ${color} mt-auto opacity-60 group-hover:opacity-100 transition-opacity`}>
                     Enter Sector <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
@@ -940,7 +940,7 @@ export default function HomePage() {
 
         {/* Bottom fade */}
         <div className="absolute bottom-0 left-0 right-0 h-64 pointer-events-none"
-          style={{ background: "linear-gradient(to top, rgba(2,1,0,0.94), transparent)" }} />
+          style={{ background: "linear-gradient(to top, rgba(255,255,255,0.94), transparent)" }} />
 
         {/* Ascending embers */}
         <EmberParticles />
@@ -1006,7 +1006,7 @@ export default function HomePage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.32, duration: 0.7 }}
-                  className="text-[rgba(160,130,90,0.68)] text-base md:text-lg mb-7 max-w-md mx-auto leading-relaxed"
+                  className="text-[rgba(80,40,10,0.6)] text-base md:text-lg mb-7 max-w-md mx-auto leading-relaxed"
                 >
                   Secure your place at the most advanced materials science symposium at IIT Madras.
                 </motion.p>
@@ -1038,7 +1038,7 @@ export default function HomePage() {
                     <div key={label} className="flex items-center gap-4 md:gap-7">
                       <div className="flex flex-col items-center gap-0.5">
                         <span className={`font-display font-black text-sm leading-none ${color}`}>{value}</span>
-                        <span className="text-[9px] uppercase tracking-[0.2em] text-[rgba(150,110,55,0.44)] mt-0.5">{label}</span>
+                        <span className="text-[9px] uppercase tracking-[0.2em] text-[rgba(100,55,15,0.5)] mt-0.5">{label}</span>
                       </div>
                       {i < arr.length - 1 && <div className="w-px h-6 bg-[rgba(180,100,0,0.16)]" />}
                     </div>
@@ -1072,7 +1072,7 @@ export default function HomePage() {
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.92 }}
-                  className="mt-10 text-[rgba(110,82,42,0.34)] text-[9px] tracking-[0.32em] uppercase font-display"
+                  className="mt-10 text-[rgba(100,55,15,0.4)] text-[9px] tracking-[0.32em] uppercase font-display"
                 >
                   IIT Madras &middot; Dept. of MME &middot; Aug 14&ndash;16, 2026
                 </motion.p>

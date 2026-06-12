@@ -38,7 +38,7 @@ export default function AuthPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center relative overflow-hidden px-4 py-24" style={{ background: "#030100" }}>
+    <div className="min-h-screen flex items-center justify-center relative overflow-hidden px-4 py-24" style={{ background: "#FFFFFF" }}>
       <ForgeBackground intensity={0.8} />
       <ParticleField count={60} />
 
@@ -53,7 +53,7 @@ export default function AuthPage() {
               <Flame className="w-7 h-7 text-white fill-white" />
             </div>
             <h1 className="font-display font-black text-2xl text-metallic mb-1">AMALGAM</h1>
-            <p className="text-[#7A5330] text-sm">IIT Madras · MME Department</p>
+            <p className="text-[rgba(100,55,15,0.7)] text-sm">IIT Madras · MME Department</p>
           </div>
 
           {/* Tabs */}
@@ -61,7 +61,7 @@ export default function AuthPage() {
             {(["login","signup"] as Mode[]).map((m) => (
               <button key={m} onClick={() => { setMode(m); setError(""); }}
                 className={`flex-1 py-3.5 text-sm font-bold tracking-wider capitalize transition-all duration-300 font-display ${
-                  mode === m ? "text-[#FFE060] border-b-2 border-[#FFB800]" : "text-[#7A5330] hover:text-[#A87838]"
+                  mode === m ? "text-[#CC4400] border-b-2 border-[#FF6B00]" : "text-[rgba(100,55,15,0.6)] hover:text-[#CC4400]"
                 }`}>
                 {m === "login" ? "Sign In" : "Sign Up"}
               </button>

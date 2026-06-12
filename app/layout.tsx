@@ -35,7 +35,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${orbitron.variable} ${spaceGrotesk.variable}`}
       suppressHydrationWarning
     >
-      <body className="min-h-screen flex flex-col bg-steel-950 text-steel-100 antialiased">
+      <body className="min-h-screen flex flex-col bg-white text-[#1A0A00] antialiased">
         <LenisWrapper>
           <ScrollProgress />
           <CursorLoader />
